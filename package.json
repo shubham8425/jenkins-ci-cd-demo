@@ -7,18 +7,24 @@
     "test": "tests"
   },
   "scripts": {
-  "build": "tsc",
-  "start": "ts-node src/app.ts",
-  "test": "jest"
-},
+    "build": "tsc",
+    "start": "ts-node src/app.ts",
+    "test": "jest",
+    "start:staging": "set PORT=3000 && ts-node src/app.ts",
+    "start:production": "set PORT=4000 && ts-node src/app.ts"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/express": "^5.0.1",
     "@types/jest": "^29.5.14",
     "jest": "^29.7.0",
     "ts-jest": "^29.3.1",
     "ts-node": "^10.9.2",
     "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "express": "^5.1.0"
   }
 }
