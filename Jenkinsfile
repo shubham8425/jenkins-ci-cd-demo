@@ -23,14 +23,6 @@ pipeline {
                 bat 'echo "Staging deployment done."'
             }
         }
-
-        stage('Deploy to Production') {
-            steps {
-                input message: "Deploy to Production?", ok: "Yes, Deploy"
-                echo 'Deploying to Production...'
-                bat 'echo "Production deployment done."'
-            }
-        }
     }
 
     post {
